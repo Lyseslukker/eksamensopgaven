@@ -1,0 +1,49 @@
+:root {
+  --light-gray: #EFEFEF;
+  --medium-gray: #CFCFCF;
+  --dark-gray: #333333;
+  --default-red: #E9485B;
+  --default-blue: #4A6FBF;
+  --default-green: #54A047;
+  --default-purple: #A12E8F;
+  --default-yellow: #FFB203;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* FONT WEIGHTS */
+/* 
+  300
+  400
+  600 
+*/
+
+h1,h2,h3,h4,h5,h6,p,a,label,input {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.topHero {
+  /* background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  object-position: "center";
+  height: 25vw;
+  overflow: hidden; */
+}
+
+/* @media screen and (max-width: 600px) {
+
+} */
+
+/* @media screen and (min-width: 800px) {
+
+} */

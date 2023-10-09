@@ -1,0 +1,92 @@
+@media screen and (max-width: 600px) {
+    .home {
+        > h1 {
+            text-align: center;
+            margin: 2vw 0;
+        }
+    
+        > .home__newsList {
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* column-gap: 3vw; */
+            row-gap: 2.5vw;
+            padding: 5vh 5vw;
+    
+            > .newsList__card {
+                display: grid;
+                grid-template-rows: 3fr 5fr;
+    
+                > .card__imgWrapper {
+                    background-position: "center";
+                    background-size: cover;
+                }
+    
+                > .card__info {
+                    background-color: var(--light-gray);
+                    padding: 2vw;
+    
+                    > p {
+                        font-size: 14px;
+                    }
+                    > a {
+                        display: grid;
+                        place-content: center;
+                        background-color: var(--dark-gray);
+                        height: 5vw;
+                        color: white;
+                        text-decoration: none;
+                        text-align: center;
+                        margin: 0.5vw 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .home {
+        > h1 {
+            text-align: center;
+            margin: 2vw 0;
+        }
+    
+        > .home__newsList {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 3vw;
+            padding: 5vh 5vw;
+    
+            > .newsList__card {
+                display: grid;
+                grid-template-rows: 3fr 5fr;
+    
+                > .card__imgWrapper {
+                    background-position: "center";
+                    background-size: cover;
+                }
+    
+                > .card__info {
+                    background-color: var(--light-gray);
+                    padding: 2vw;
+    
+                    > p {
+                        font-size: 14px;
+                    }
+                    > a {
+                        display: grid;
+                        place-content: center;
+                        background-color: var(--dark-gray);
+                        height: 2.5vw;
+                        color: white;
+                        text-decoration: none;
+                        text-align: center;
+                        margin: 0.5vw 0;
+                    }
+                }
+            }
+        }
+    }
+
+}

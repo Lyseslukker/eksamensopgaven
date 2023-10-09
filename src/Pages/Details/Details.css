@@ -1,0 +1,19 @@
+@media screen and (max-width: 600px) {
+    .details {
+        padding: 5vw;
+        display: grid;
+        /* grid-auto-flow: column; */
+        /* grid-template-columns: 4fr 7fr; */
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .details {
+        padding: 5vw;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 4fr 7fr;
+    }
+
+}
+

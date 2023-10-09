@@ -1,0 +1,51 @@
+@media screen and (max-width: 600px) {
+    .camps {
+        > h1 {
+            text-align: center;
+            margin: 2vw 0;
+        }
+    
+        .camps__cInformation {
+            padding: 5vw 2.5vw;
+            display: grid;
+            /* grid-auto-flow: column;
+            grid-template-columns: 2fr 1fr; */
+            column-gap: 2.5vw;
+    
+            .cInformation__cInfo {
+    
+                > section {
+                    > h2 {
+                        margin: 1vw 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .camps {
+        > h1 {
+            text-align: center;
+            margin: 2vw 0;
+        }
+    
+        .camps__cInformation {
+            padding: 5vw 2.5vw;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 2fr 1fr;
+            column-gap: 2.5vw;
+    
+            .cInformation__cInfo {
+    
+                > section {
+                    > h2 {
+                        margin: 1vw 0;
+                    }
+                }
+            }
+        }
+    }
+}

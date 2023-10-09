@@ -1,0 +1,406 @@
+@media screen and (max-width: 600px) {
+    .billetter {
+
+        > h1 {
+            text-align: center;
+            padding: 2.5vw 0;
+        }
+    
+        /* BESTILLINGS FORM */
+        > .billetter__tickets {
+            padding: 5vw 2.5vw;
+    
+            /* INFO */
+            > .tickets__ticketsInfo {
+                > .ticketsInfo__header {
+                    background-color: var(--dark-gray);
+                    color: white;
+                    padding: 1vw;
+                }
+    
+                > .ticketsInfo__partout__body {
+                    padding: 1vw;
+    
+                    > h3 {
+                        padding: 1vw 0;
+                    }
+                }
+    
+                > .ticketsInfo__enkelt__body {
+                    padding: 1vw;
+    
+                    > h3 {
+                        padding: 1vw 0;
+                    }
+                }
+            }
+    
+            /* BESTILLING */
+            > .tickets__ticketsOrder {
+                > .ticketsOrder__header {
+                    background-color: var(--dark-gray);
+                    color: white;
+                    padding: 1vw;
+                }
+    
+                > .ticketsOrder__body {
+                    
+                    > .body__ticket {
+                        display: grid;
+                        grid-auto-flow: column;
+                        grid-template-columns: 1fr 2fr 2fr 2fr;
+                        justify-items: right;
+                        border-bottom: solid 1px black;
+                        > p {
+                            padding: 1vw 0;
+                            font-size: 0.8rem;
+                        }
+                    }
+                    > .body__ticketsTotal {
+                        display: grid;
+                        grid-template-columns: 3fr 1fr;
+                        justify-items: right;
+                        border-bottom: solid 1px black;
+                        > p {
+                            padding: 1vw 0;
+                        }
+                    }
+                }
+            }
+    
+            /* FORM */
+            .tickets__finalForm {
+                padding: 2.5vw;
+    
+                > .formikForm {
+                    display: grid;
+                    > label {
+                        font-size: 1.2rem;
+                        padding: 0.5vw 0;
+                    }
+                    > input {
+                        padding: 0.5vw;
+                    }
+                    > #my-radio-group {
+                        padding: 1vw 0;
+                    }
+                    > .my-radio-group__wrapper {
+                        display: grid;
+                        font-family: 'Noto Sans', sans-serif;
+                        font-size: 1.2rem;
+                        row-gap: 1vw;
+                    }
+                    > .firstSubmit {
+                        background-color: var(--default-blue);
+                        border: none;
+                        color: white;
+                        padding: 1vw 0;
+                        margin: 2vw 0;
+                    }
+                    > .secondSubmit {
+                        display: grid;
+                        grid-auto-flow: column;
+                        column-gap: 1vw;
+    
+                        > .secondSubmit__confirm {
+                            background-color: var(--default-green);
+                            color: white;
+                            padding: 1vw 0;
+                            margin: 2vw 0;
+                            border: none;
+                        }
+                        > .secondSubmit__cancel {
+                            background-color: var(--default-red);
+                            color: white;
+                            padding: 1vw 0;
+                            margin: 2vw 0;
+                            border: none;
+                        }
+                    }
+    
+    
+                    > .formikForm__errorMsg {
+                        color: var(--default-red)
+                    }
+                }
+            }
+        }
+    
+    
+        /* BILLET VALG */
+        .billetter__orderTickets {
+            padding: 5vw 2.5vw;
+    
+            /* PARTOUT */
+            > .orderTickets__partout {
+    
+                > .partout__header {
+                    padding: 1vw;
+                    background-color: var(--dark-gray);
+                    color: white;
+                    
+                    > h2 {
+                        font-weight: 300;
+                    }
+                }
+    
+                > .partout__listItem {
+                    /* height: 2.5vw; */
+                    display: grid;
+                    align-items: center;
+                    /* grid-auto-flow: column;
+                    grid-template-columns: 2fr 2fr 1fr; */
+                    background-color: var(--light-gray);
+                    border-bottom: solid 2px black;
+    
+                    > #deluxe, #alm {
+                        padding: 2.5vw;
+                    }
+                }
+            }
+    
+    
+            /* ENKELT */
+            > .orderTickets__enkelt {
+                margin: 10vh 0;
+                > .enkelt__header {
+                    padding: 1vw;
+                    background-color: var(--dark-gray);
+                    color: white;
+                    
+                    > h2 {
+                        font-weight: 300;
+                    }
+                }
+                
+                > .enkelt__listItem {
+                    display: grid;
+                    align-items: center;
+                    /* grid-auto-flow: column;
+                    grid-template-columns: 2fr 2fr 1fr; */
+                    background-color: var(--light-gray);
+                    border-bottom: solid 2px black;
+    
+                    > #onsdag, #torsdag, #fredag, #lørdag {
+                        padding: 2.5vw;
+                    }
+                }
+            }
+    
+            > .orderTickets__submit {
+                > button {
+                    width: 100%;
+                    background-color: var(--default-red);
+                    border: none;
+                    color: white;
+                    padding: 1vw 0;
+                    margin: 2vw 0;
+                }
+            }
+    
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .billetter {
+
+        > h1 {
+            text-align: center;
+            padding: 2.5vw 0;
+        }
+    
+        /* BESTILLINGS FORM */
+        > .billetter__tickets {
+            padding: 5vw 10vw;
+    
+            /* INFO */
+            > .tickets__ticketsInfo {
+                > .ticketsInfo__header {
+                    background-color: var(--dark-gray);
+                    color: white;
+                    padding: 1vw;
+                }
+    
+                > .ticketsInfo__partout__body {
+                    padding: 1vw;
+    
+                    > h3 {
+                        padding: 1vw 0;
+                    }
+                }
+    
+                > .ticketsInfo__enkelt__body {
+                    padding: 1vw;
+    
+                    > h3 {
+                        padding: 1vw 0;
+                    }
+                }
+            }
+    
+            /* BESTILLING */
+            > .tickets__ticketsOrder {
+                > .ticketsOrder__header {
+                    background-color: var(--dark-gray);
+                    color: white;
+                    padding: 1vw;
+                }
+    
+                > .ticketsOrder__body {
+                    
+                    > .body__ticket {
+                        display: grid;
+                        grid-auto-flow: column;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        justify-items: right;
+                        border-bottom: solid 1px black;
+                        > p {
+                            padding: 1vw 0;
+                        }
+                    }
+                    > .body__ticketsTotal {
+                        display: grid;
+                        grid-template-columns: 3fr 1fr;
+                        justify-items: right;
+                        border-bottom: solid 1px black;
+                        > p {
+                            padding: 1vw 0;
+                        }
+                    }
+                }
+            }
+    
+            /* FORM */
+            .tickets__finalForm {
+                padding: 2.5vw 10vw;
+    
+                > .formikForm {
+                    display: grid;
+                    > label {
+                        font-size: 1.2rem;
+                        padding: 0.5vw 0;
+                    }
+                    > input {
+                        padding: 0.5vw;
+                    }
+                    > #my-radio-group {
+                        padding: 1vw 0;
+                    }
+                    > .my-radio-group__wrapper {
+                        display: grid;
+                        font-family: 'Noto Sans', sans-serif;
+                        font-size: 1.2rem;
+                        row-gap: 1vw;
+                    }
+                    > .firstSubmit {
+                        background-color: var(--default-blue);
+                        border: none;
+                        color: white;
+                        padding: 1vw 0;
+                        margin: 2vw 0;
+                    }
+                    > .secondSubmit {
+                        display: grid;
+                        grid-auto-flow: column;
+                        column-gap: 1vw;
+    
+                        > .secondSubmit__confirm {
+                            background-color: var(--default-green);
+                            color: white;
+                            padding: 1vw 0;
+                            margin: 2vw 0;
+                            border: none;
+                        }
+                        > .secondSubmit__cancel {
+                            background-color: var(--default-red);
+                            color: white;
+                            padding: 1vw 0;
+                            margin: 2vw 0;
+                            border: none;
+                        }
+                    }
+    
+    
+                    > .formikForm__errorMsg {
+                        color: var(--default-red)
+                    }
+                }
+            }
+        }
+    
+    
+        /* BILLET VALG */
+        .billetter__orderTickets {
+            padding: 5vw 10vw;
+    
+            /* PARTOUT */
+            > .orderTickets__partout {
+    
+                > .partout__header {
+                    padding: 1vw;
+                    background-color: var(--dark-gray);
+                    color: white;
+                    
+                    > h2 {
+                        font-weight: 300;
+                    }
+                }
+    
+                > .partout__listItem {
+                    /* height: 2.5vw; */
+                    display: grid;
+                    grid-auto-flow: column;
+                    align-items: center;
+                    grid-template-columns: 2fr 2fr 1fr;
+                    background-color: var(--light-gray);
+                    border-bottom: solid 2px black;
+    
+                    > #deluxe, #alm {
+                        height: 2.5vw;
+                    }
+                }
+            }
+    
+    
+            /* ENKELT */
+            > .orderTickets__enkelt {
+                margin: 10vh 0;
+                > .enkelt__header {
+                    padding: 1vw;
+                    background-color: var(--dark-gray);
+                    color: white;
+                    
+                    > h2 {
+                        font-weight: 300;
+                    }
+                }
+                
+                > .enkelt__listItem {
+                    display: grid;
+                    grid-auto-flow: column;
+                    align-items: center;
+                    grid-template-columns: 2fr 2fr 1fr;
+                    background-color: var(--light-gray);
+                    border-bottom: solid 2px black;
+    
+                    > #onsdag, #torsdag, #fredag, #lørdag {
+                        height: 2.5vw;
+                    }
+                }
+            }
+    
+            > .orderTickets__submit {
+                > button {
+                    width: 100%;
+                    background-color: var(--default-red);
+                    border: none;
+                    color: white;
+                    padding: 1vw 0;
+                    margin: 2vw 0;
+                }
+            }
+    
+        }
+    }
+}

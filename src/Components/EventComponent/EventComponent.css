@@ -1,0 +1,207 @@
+@media screen and (max-width: 600px) {
+    .eventComponent {
+        padding: 2.5vw 10vw;
+    
+        > .eventComponent__eventCard {
+    
+            > .eventCard__header {
+                font-size: 1rem;
+                color: white;
+                padding: 1vw;
+                margin: 2vw 0;
+                > h3 { 
+                    font-weight: 300; 
+                }
+            }
+            > .eventCard__artist {
+                padding: 1vw;
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 3fr 1fr;
+                font-size: 1.2rem;
+                background-color: var(--light-gray);
+                border-bottom: 2px solid black;
+            }
+        }
+    }
+    
+    .eventBlue {
+        background-color: var(--default-blue);
+    }
+    .eventRed {
+        background-color: var(--default-red);
+    }
+    .eventPurple {
+        background-color: var(--default-purple);
+    }
+    .eventGreen {
+        background-color: var(--default-green);
+    }
+    
+    
+    
+    /* MODAL */
+    .Blå_Scene {background-color: var(--default-blue);}
+    .Rød_Scene {background-color: var(--default-red);}
+    .Lilla_Scene {background-color: var(--default-purple);}
+    .Grøn_Scene {background-color: var(--default-green);}
+    
+    .eventModal {
+    
+        > .eventModal__innerModalWrapper {
+            padding: 2.5vw;
+            display: grid;
+            > .innerModalWrapper__closeIt {
+                right: -1.2vw;
+                top: -1.2vw;
+                position: absolute;
+                color: white;
+            }
+            > .innerModalWrapper__modalHeader {
+                font-size: 1rem;
+                padding: 0 2vw;
+                margin-bottom: 1vw;
+                display: grid;
+                align-content: center;
+                > p {
+                    color: white;
+                    font-weight: 300;
+                }
+            }
+            > .innerModalWrapper__modalBody {
+                display: grid;
+                /* grid-auto-flow: column;
+                grid-template-columns: 2fr 2fr; */
+    
+    
+                > .modalBody__imgWrapper {
+                    background-position: "center";
+                    background-size: cover;
+                }
+                > .modalBody__collectionWrapper {
+                    display: grid;
+    
+                    > .collectionWrapper__infoWrapper {
+                        padding: 2.5vw;
+                    }
+                    > .collectionWrapper__someWrapper {
+                        padding: 2.5vw;
+                        display: grid;
+                        grid-auto-flow: column;
+                        justify-content: right;
+    
+                        > div {
+                            padding: 0 0.5vw;
+                            font-size: 1.2vw;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .eventComponent {
+        padding: 2.5vw 10vw;
+    
+        > .eventComponent__eventCard {
+    
+            > .eventCard__header {
+                font-size: 2.8rem;
+                color: white;
+                padding: 1vw;
+                margin: 2vw 0;
+                > h3 { 
+                    font-weight: 300; 
+                }
+            }
+            > .eventCard__artist {
+                padding: 1vw;
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 3fr 1fr;
+                font-size: 2.6rem;
+                background-color: var(--light-gray);
+                border-bottom: 2px solid black;
+            }
+        }
+    }
+    
+    .eventBlue {
+        background-color: var(--default-blue);
+    }
+    .eventRed {
+        background-color: var(--default-red);
+    }
+    .eventPurple {
+        background-color: var(--default-purple);
+    }
+    .eventGreen {
+        background-color: var(--default-green);
+    }
+    
+    
+    
+    /* MODAL */
+    .Blå_Scene {background-color: var(--default-blue);}
+    .Rød_Scene {background-color: var(--default-red);}
+    .Lilla_Scene {background-color: var(--default-purple);}
+    .Grøn_Scene {background-color: var(--default-green);}
+    
+    .eventModal {
+    
+        > .eventModal__innerModalWrapper {
+            padding: 2.5vw;
+            display: grid;
+            > .innerModalWrapper__closeIt {
+                right: -1.2vw;
+                top: -1.2vw;
+                position: absolute;
+                color: white;
+            }
+            > .innerModalWrapper__modalHeader {
+                font-size: 2.5rem;
+                padding: 0 2vw;
+                margin-bottom: 1vw;
+                display: grid;
+                align-content: center;
+                > p {
+                    color: white;
+                    font-weight: 300;
+                }
+            }
+            > .innerModalWrapper__modalBody {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 2fr 2fr;
+    
+    
+                > .modalBody__imgWrapper {
+                    background-position: "center";
+                    background-size: cover;
+                }
+                > .modalBody__collectionWrapper {
+                    display: grid;
+    
+                    > .collectionWrapper__infoWrapper {
+                        padding: 2.5vw;
+                    }
+                    > .collectionWrapper__someWrapper {
+                        padding: 2.5vw;
+                        display: grid;
+                        grid-auto-flow: column;
+                        justify-content: right;
+    
+                        > div {
+                            padding: 0 0.5vw;
+                            font-size: 1.2vw;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

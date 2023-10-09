@@ -1,0 +1,298 @@
+@media screen and (max-width: 600px) {
+    .userpage {
+        padding: 2.5vw 5vw;
+    
+        > h1 {
+            text-align: center;
+        }
+        .userpage__buttons {
+            display: grid;
+            grid-auto-flow: column;
+            column-gap: 1vw;
+    
+            > button {
+                background-color: var(--default-blue);
+                border: none;
+                color: white;
+                padding: 1vw 0;
+                margin: 2vw 0;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+    /* USERCUSTOM */
+    .user {
+        > .user__onsdag {
+            > h3 {
+                background-color: var(--dark-gray);
+                color: white;
+                padding: 1vw;
+                font-weight: 300;
+            }
+            > .card {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 2fr 2fr;
+                > p,div {
+                    padding: 1vw 0;
+                }
+                > .BlåScene {
+                    background-color: var(--default-blue);
+                }
+                > .RødScene {
+                    background-color: var(--default-red);
+                }
+                > .LillaScene {
+                    background-color: var(--default-purple);
+                }
+                > .GrønScene {
+                    background-color: var(--default-green);
+                }
+            }
+        }
+        > .user__torsdag {
+            > h3 {
+                background-color: var(--dark-gray);
+                color: white;
+                padding: 1vw;
+                font-weight: 300;
+            }
+            > .card {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 2fr 2fr;
+                > p,div {
+                    padding: 1vw 0;
+                }
+                > .BlåScene {
+                    background-color: var(--default-blue);
+                }
+                > .RødScene {
+                    background-color: var(--default-red);
+                }
+                > .LillaScene {
+                    background-color: var(--default-purple);
+                }
+                > .GrønScene {
+                    background-color: var(--default-green);
+                }
+            }
+        }
+        > .user__fredag {
+            > h3 {
+                background-color: var(--dark-gray);
+                color: white;
+                padding: 1vw;
+                font-weight: 300;
+            }
+            > .card {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 2fr 2fr;
+                > p,div {
+                    padding: 1vw 0;
+                }
+                > .BlåScene {
+                    background-color: var(--default-blue);
+                }
+                > .RødScene {
+                    background-color: var(--default-red);
+                }
+                > .LillaScene {
+                    background-color: var(--default-purple);
+                }
+                > .GrønScene {
+                    background-color: var(--default-green);
+                }
+            }
+        }
+        > .user__lørdag {
+            > h3 {
+                background-color: var(--dark-gray);
+                color: white;
+                padding: 1vw;
+                font-weight: 300;
+            }
+            > .card {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 2fr 2fr;
+                > p,div {
+                    padding: 1vw 0;
+                }
+                > .BlåScene {
+                    background-color: var(--default-blue);
+                }
+                > .RødScene {
+                    background-color: var(--default-red);
+                }
+                > .LillaScene {
+                    background-color: var(--default-purple);
+                }
+                > .GrønScene {
+                    background-color: var(--default-green);
+                }
+            }
+        }
+        > .user__empty {
+            > h3 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .userpage {
+        padding: 2.5vw 25vw;
+    
+        > h1 {
+            text-align: center;
+        }
+        .userpage__buttons {
+            display: grid;
+            grid-auto-flow: column;
+            column-gap: 1vw;
+    
+            > button {
+                background-color: var(--default-blue);
+                border: none;
+                color: white;
+                padding: 1vw 0;
+                margin: 2vw 0;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+    /* USERCUSTOM */
+    .user {
+        > .user__onsdag {
+            > h3 {
+                background-color: var(--dark-gray);
+                color: white;
+                padding: 1vw;
+                font-weight: 300;
+            }
+            > .card {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 2fr 2fr;
+                > p,div {
+                    padding: 1vw 0;
+                    text-align: center;
+                }
+                > .BlåScene {
+                    background-color: var(--default-blue);
+                }
+                > .RødScene {
+                    background-color: var(--default-red);
+                }
+                > .LillaScene {
+                    background-color: var(--default-purple);
+                }
+                > .GrønScene {
+                    background-color: var(--default-green);
+                }
+            }
+        }
+        > .user__torsdag {
+            > h3 {
+                background-color: var(--dark-gray);
+                color: white;
+                padding: 1vw;
+                font-weight: 300;
+            }
+            > .card {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 2fr 2fr;
+                > p,div {
+                    padding: 1vw 0;
+                    text-align: center;
+                }
+                > .BlåScene {
+                    background-color: var(--default-blue);
+                }
+                > .RødScene {
+                    background-color: var(--default-red);
+                }
+                > .LillaScene {
+                    background-color: var(--default-purple);
+                }
+                > .GrønScene {
+                    background-color: var(--default-green);
+                }
+            }
+        }
+        > .user__fredag {
+            > h3 {
+                background-color: var(--dark-gray);
+                color: white;
+                padding: 1vw;
+                font-weight: 300;
+            }
+            > .card {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 2fr 2fr;
+                > p,div {
+                    padding: 1vw 0;
+                    text-align: center;
+                }
+                > .BlåScene {
+                    background-color: var(--default-blue);
+                }
+                > .RødScene {
+                    background-color: var(--default-red);
+                }
+                > .LillaScene {
+                    background-color: var(--default-purple);
+                }
+                > .GrønScene {
+                    background-color: var(--default-green);
+                }
+            }
+        }
+        > .user__lørdag {
+            > h3 {
+                background-color: var(--dark-gray);
+                color: white;
+                padding: 1vw;
+                font-weight: 300;
+            }
+            > .card {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 2fr 2fr;
+                > p,div {
+                    padding: 1vw 0;
+                    text-align: center;
+                }
+                > .BlåScene {
+                    background-color: var(--default-blue);
+                }
+                > .RødScene {
+                    background-color: var(--default-red);
+                }
+                > .LillaScene {
+                    background-color: var(--default-purple);
+                }
+                > .GrønScene {
+                    background-color: var(--default-green);
+                }
+            }
+        }
+        > .user__empty {
+            > h3 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+
+

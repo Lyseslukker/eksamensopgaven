@@ -1,0 +1,58 @@
+@media screen and (max-width: 600px) {
+    .praktisk {
+        display: grid;
+        row-gap: 2.5vw;
+        > h1 {
+            padding: 2.5vw;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    
+        > .praktisk__festival {
+            padding: 2.5vw;
+            display: grid;
+            /* grid-auto-flow: column;
+            grid-template-columns: 2fr 1fr; */
+    
+            > .festival__info {
+                display: grid;
+                place-content: center;
+            }
+        }
+    
+        > h3 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .praktisk {
+        display: grid;
+        row-gap: 2.5vw;
+        > h1 {
+            padding: 2.5vw;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    
+        > .praktisk__festival {
+            padding: 2.5vw;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 2fr 1fr;
+    
+            > .festival__info {
+                display: grid;
+                place-content: center;
+            }
+        }
+    
+        > h3 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    }
+}
+
