@@ -5,6 +5,7 @@ import UserContext from "../../Components/Context/UserContext";
 import Cookies from 'js-cookie';
 import Userall from '../../Components/Userall/Userall';
 import Usercustom from '../../Components/Usercustom/Usercustom';
+import { useUser } from '../../customHooks/user';
 
 
 export default function Userpage() {
@@ -15,7 +16,9 @@ export default function Userpage() {
     const [userCustom, setUserCustom] = useState(true);
     
 
-    const { userLogin, setUserLogin } = useContext(UserContext)
+    // const { userLogin, setUserLogin } = useContext(UserContext)
+    const { userLogin, setUserLogin } = useUser()
+    
 
     const allHandler = () => {
         setUserAll(true)

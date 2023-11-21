@@ -23,7 +23,7 @@
     
     /* USERCUSTOM */
     .user {
-        > .user__onsdag {
+        > .user__Onsdag {
             > h3 {
                 background-color: var(--dark-gray);
                 color: white;
@@ -51,7 +51,7 @@
                 }
             }
         }
-        > .user__torsdag {
+        > .user__Torsdag {
             > h3 {
                 background-color: var(--dark-gray);
                 color: white;
@@ -79,7 +79,7 @@
                 }
             }
         }
-        > .user__fredag {
+        > .user__Fredag {
             > h3 {
                 background-color: var(--dark-gray);
                 color: white;
@@ -107,7 +107,7 @@
                 }
             }
         }
-        > .user__lørdag {
+        > .user__Lørdag {
             > h3 {
                 background-color: var(--dark-gray);
                 color: white;
@@ -168,7 +168,7 @@
     
     /* USERCUSTOM */
     .user {
-        > .user__onsdag {
+        > .user__Onsdag {
             > h3 {
                 background-color: var(--dark-gray);
                 color: white;
@@ -197,7 +197,7 @@
                 }
             }
         }
-        > .user__torsdag {
+        > .user__Torsdag {
             > h3 {
                 background-color: var(--dark-gray);
                 color: white;
@@ -226,7 +226,7 @@
                 }
             }
         }
-        > .user__fredag {
+        > .user__Fredag {
             > h3 {
                 background-color: var(--dark-gray);
                 color: white;
@@ -255,7 +255,7 @@
                 }
             }
         }
-        > .user__lørdag {
+        > .user__Lørdag {
             > h3 {
                 background-color: var(--dark-gray);
                 color: white;

@@ -6,12 +6,14 @@ import CustomError from "../../Pages/Error/CustomError"
 import CustomLoading from "../../Pages/Loading/CustomLoading"
 import {RxPlus} from "react-icons/rx"
 import "../../Pages/Userpage/Userpage"
+import { useUser } from '../../customHooks/user';
 
 export default function Userall() {
 
     const navigate = useNavigate()
 
-    const { userLogin, setUserLogin } = useContext(UserContext)
+    // const { userLogin, setUserLogin } = useContext(UserContext)
+    const { userLogin, setUserLogin } = useUser()
 
     const allBandsByDay = [
         `http://localhost:4000/bands?day=Onsdag`,
@@ -81,7 +83,7 @@ export default function Userall() {
                 )
             })
             .then((datas) => {
-                console.log(datas)
+                // console.log(datas)
                 setAllOnsdag(datas[0])
                 setAllTorsdag(datas[1])
                 setAllFredag(datas[2])

@@ -14,45 +14,47 @@ import Camps from './Pages/Camps/Camps'
 import Praktisk from './Pages/Praktisk/Praktisk'
 import UserContext from './Components/Context/UserContext'
 import Cookies from 'js-cookie'
+import { UserProvider } from './customHooks/user'
 
 
 
 
 function App() {
 
-  const [userLogin, setUserLogin] = useState({
-      id: false,
-      user: false,
-      token: false
-  });
+  // const [userLogin, setUserLogin] = useState({
+  //     id: false,
+  //     user: false,
+  //     token: false
+  // });
 
 
-  useEffect(() => {
-    const user = Cookies.get('user')
-    const token = Cookies.get('token')
-    const id = Cookies.get('id')
-    // If the cookies exist
-    // Set update them with the userContext
-    if (token && user && id) {
-        setUserLogin({
-            user: user,
-            token: token,
-            id: id
-        })
-    }
-    else {
-        setUserLogin({
-          user: false,
-          token: false,
-          id: false
-        })
-    }
-}, []);
+//   useEffect(() => {
+//     const user = Cookies.get('user')
+//     const token = Cookies.get('token')
+//     const id = Cookies.get('id')
+//     // If the cookies exist
+//     // Set update them with the userContext
+//     if (token && user && id) {
+//         setUserLogin({
+//             user: user,
+//             token: token,
+//             id: id
+//         })
+//     }
+//     else {
+//         setUserLogin({
+//           user: false,
+//           token: false,
+//           id: false
+//         })
+//     }
+// }, []);
 
 
   return (
     <>
-      <UserContext.Provider value={{userLogin, setUserLogin}}>
+      {/* <UserContext.Provider value={{userLogin, setUserLogin}}> */}
+      <UserProvider>
         <Routes>
             <Route path="/" element={<NavigationTop />}>
                 <Route index element={<Home />} />
@@ -67,7 +69,8 @@ function App() {
                 <Route path="loading" element={<CustomLoading />} />
             </Route>
         </Routes>
-      </UserContext.Provider>
+      </UserProvider>
+      {/* </UserContext.Provider> */}
     </>
   )
 }

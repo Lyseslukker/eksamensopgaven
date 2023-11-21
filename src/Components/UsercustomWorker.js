@@ -8,11 +8,11 @@ self.addEventListener("message", (e) => {
         }
     })
     .then((response) => {
-        console.log("FETCH RESPONSE: ", response)
+        // console.log("FETCH RESPONSE: ", response)
         return response.json()
     })
     .then((firstDatas) => {
-        console.log("FETCH DATA: ", firstDatas)
+        // console.log("FETCH DATA: ", firstDatas)
         if (firstDatas === "Private resource access: entity must have a reference to the owner id") {
             return "no-program"
         }
@@ -36,7 +36,7 @@ self.addEventListener("message", (e) => {
         })
     })
     .then((bothDatas) => {
-        console.log("FETCH FINAL DATA: ", bothDatas)
+        // console.log("FETCH FINAL DATA: ", bothDatas)
         self.postMessage(bothDatas)
     })
 

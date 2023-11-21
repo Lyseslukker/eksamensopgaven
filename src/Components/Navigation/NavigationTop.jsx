@@ -6,11 +6,13 @@ import {FaSearch} from "react-icons/fa"
 import UserContext from "../../Components/Context/UserContext";
 import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom'
+import { useUser } from '../../customHooks/user'
 
 export default function NavigationTop() {
 
     const navigate = useNavigate()
-    const { userLogin, setUserLogin } = useContext(UserContext)
+    // const { userLogin, setUserLogin } = useContext(UserContext)
+    const {userLogin, setUserLogin} = useUser()
     const [showLogout, setShowLogout] = useState(false);
 
     const mouseEnter = () => {
