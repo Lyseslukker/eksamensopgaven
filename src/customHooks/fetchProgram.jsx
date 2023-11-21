@@ -69,3 +69,29 @@ export const collectDays = (data) => {
         return daysArray
     }
 }
+
+
+
+export const fetchAllBands = async () => {
+    const avalibleDays = [
+        "Onsdag",
+        "Torsdag",
+        "Fredag",
+        "Lørdag"
+    ]
+
+    const fetchBands = await Promise.all(
+        avalibleDays.map((day) => {
+            return fetch(`http://localhost:4000/bands?day=${day}`)
+        })
+    )
+    
+    const allBands = await Promise.all(
+        fetchBands.map((response) => {
+            return response.json()
+        })
+    )
+
+    // console.log(allBands)
+    return allBands
+}

@@ -6,7 +6,8 @@ import CustomError from "../../Pages/Error/CustomError"
 import CustomLoading from "../../Pages/Loading/CustomLoading"
 import {RxPlus} from "react-icons/rx"
 import "../../Pages/Userpage/Userpage"
-import { useUser } from '../../customHooks/user';
+import { useUser } from '../../customHooks/user'
+import { fetchAllBands } from '../../customHooks/fetchProgram';
 
 export default function Userall() {
 
@@ -15,20 +16,15 @@ export default function Userall() {
     // const { userLogin, setUserLogin } = useContext(UserContext)
     const { userLogin, setUserLogin } = useUser()
 
-    const allBandsByDay = [
-        `http://localhost:4000/bands?day=Onsdag`,
-        `http://localhost:4000/bands?day=Torsdag`,
-        `http://localhost:4000/bands?day=Fredag`,
-        `http://localhost:4000/bands?day=Lørdag`
-    ]
-
-    const [allOnsdag, setAllOnsdag] = useState(false);
-    const [allTorsdag, setAllTorsdag] = useState(false);
-    const [allFredag, setAllFredag] = useState(false);
-    const [allLørdag, setAllLørdag] = useState(false);
-
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true);
+    const [bands, setBands] = useState([]);
+
+    const setup = async () => {
+        const fetchedBands = await fetchAllBands()
+        setBands(fetchedBands)
+        setLoading(false)
+    }
 
 
     const addToMyProgramHandler = (e) => {
@@ -55,53 +51,14 @@ export default function Userall() {
     }
 
     
-
     useEffect(() => {
-        const user = Cookies.get('user')
-        const token = Cookies.get('token')
-        const id = Cookies.get('id')
-        // console.log(userLogin)
-        // If the cookies exist
-        // Update them with the userContext
-        if (token && user && id) {
-            setUserLogin({
-                user: user,
-                token: token,
-                id: id
-            })
-            
-            Promise.all(
-                allBandsByDay.map((url) => {
-                    return fetch(url)
-                })
-            )
-            .then((responses) => {
-                return Promise.all(
-                    responses.map((response) => {
-                        return response.json()
-                    })
-                )
-            })
-            .then((datas) => {
-                // console.log(datas)
-                setAllOnsdag(datas[0])
-                setAllTorsdag(datas[1])
-                setAllFredag(datas[2])
-                setAllLørdag(datas[3])
-                setLoading(false)
-            })
+        if (!userLogin) {
+            return
         }
         else {
-            setUserLogin({
-                user: false,
-                token: false,
-                id: false
-            })
-            navigate("/login")
+            setup()
         }
-
-        
-    }, []);
+    }, [userLogin]);
     
     const spaceBegone = (classname) => {
         return classname.split(' ').join('_')
@@ -115,66 +72,27 @@ export default function Userall() {
         return <CustomLoading />
     }
     
-    
+    // console.log("All bands: ", bands)
     return (
         <div className='user'>
 
-            {allOnsdag ? 
-                <div className='user__onsdag'>
-                    <h3>Onsdag</h3>
-                    {allOnsdag.map((band) => {
-                        return (
-                            <div key={band.id} className="card">
-                                <p className={`card__time ${spaceBegone(band.stage)}`}>{band.time}</p>
-                                <p className='card__name'>{band.name}</p>
-                                <div className="card__add" data-id={band.id} onClick={addToMyProgramHandler}><RxPlus /></div>
-                            </div>
-                        )
-                    })}
-                </div> 
-                : null}
-            {allTorsdag ? 
-                <div className='user__torsdag'>
-                    <h3>Torsdag</h3>
-                    {allTorsdag.map((band) => {
-                        return (
-                            <div key={band.id} className="card">
-                                <p className={`card__time ${spaceBegone(band.stage)}`}>{band.time}</p>
-                                <p className='card__name'>{band.name}</p>
-                                <div className="card__add" data-id={band.id} onClick={addToMyProgramHandler}><RxPlus /></div>
-                            </div>
-                        )
-                    })}
-                </div> 
-                : null}
-            {allFredag ? 
-                <div className='user__fredag'>
-                    <h3>Fredag</h3>
-                    {allFredag.map((band) => {
-                        return (
-                            <div key={band.id} className="card">
-                                <p className={`card__time ${spaceBegone(band.stage)}`}>{band.time}</p>
-                                <p className='card__name'>{band.name}</p>
-                                <div className="card__add" data-id={band.id} onClick={addToMyProgramHandler}><RxPlus /></div>
-                            </div>
-                        )
-                    })}
-                </div> 
-                : null}
-            {allLørdag ? 
-                <div className='user__lørdag'>
-                    <h3>Lørdag</h3>
-                    {allLørdag.map((band) => {
-                        return (
-                            <div key={band.id} className="card">
-                                <p className={`card__time ${spaceBegone(band.stage)}`}>{band.time}</p>
-                                <p className='card__name'>{band.name}</p>
-                                <div className="card__add" data-id={band.id} onClick={addToMyProgramHandler}><RxPlus /></div>
-                            </div>
-                        )
-                    })}
-                </div> 
-                : null}
+            {bands.map((day) => {
+                return (
+                    <div className={`user__${day[0].day}`}>
+                        <h3>{day[0].day}</h3>
+                        {day.map((band) => {
+                            return (
+                                <div key={band.id} className="card">
+                                    <p className={`card__time ${spaceBegone(band.stage)}`}>{band.time}</p>
+                                    <p className='card__name'>{band.name}</p>
+                                    <div className="card__add" data-id={band.id} onClick={addToMyProgramHandler}><RxPlus /></div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                )
+                
+            })}
         </div>
     )
 }

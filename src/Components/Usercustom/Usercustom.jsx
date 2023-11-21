@@ -1,6 +1,4 @@
 import React, {useState, useEffect, useContext} from 'react'
-import UserContext from "../../Components/Context/UserContext"
-import Cookies from 'js-cookie'
 import {RxCross2} from "react-icons/rx"
 import CustomError from "../../Pages/Error/CustomError"
 import CustomLoading from "../../Pages/Loading/CustomLoading"
@@ -10,7 +8,6 @@ import {useUser} from "../../customHooks/user"
 
 export default function Usercustom() {
 
-    // const { userLogin, setUserLogin } = useContext(UserContext)
 
     const {userLogin, setUserLogin} = useUser()
 
@@ -36,7 +33,6 @@ export default function Usercustom() {
     const deleteBandFromMyProgram = (e) => {
 
         const deleteId = e.currentTarget.dataset.deleteid
-        // console.log(e.currentTarget.dataset.deleteid)
 
         fetch(`http://localhost:4000/my-program/${deleteId}`, {
             method: "DELETE",
@@ -77,7 +73,7 @@ export default function Usercustom() {
 
     if (!myProgram) return <div className='user__empty'><h3>Du har intet program</h3></div>
 
-    
+    // console.log("Myprogram", myProgram)
     return (
         <div className='user'>
 
@@ -87,7 +83,6 @@ export default function Usercustom() {
                     <div key={day} className={`user__${day}`}>
                         <h3>{day}</h3>
                         {updateDay(day, myProgram).map((band) => {
-                            // console.log(band)
                             return (
                                 <div key={band.id} className="card">
                                     <p className={`card__time ${spaceBegone(band.stage)}`}>{band.time}</p>
