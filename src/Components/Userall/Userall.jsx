@@ -72,13 +72,13 @@ export default function Userall() {
         return <CustomLoading />
     }
     
-    // console.log("All bands: ", bands)
+    console.log("All bands: ", bands)
     return (
         <div className='user'>
 
             {bands.map((day) => {
                 return (
-                    <div className={`user__${day[0].day}`}>
+                    <div key={day[0].day} className={`user__${day[0].day}`}>
                         <h3>{day[0].day}</h3>
                         {day.map((band) => {
                             return (

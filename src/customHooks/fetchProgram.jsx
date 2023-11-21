@@ -43,7 +43,16 @@ export const fetchProgram = async (e) => {
     catch (error) {
         return error
     }
+}
 
+export const sortPerDay = (data) => {
+    const avalibleDays = collectDays(data)
+
+    const sortedBands = avalibleDays.map((day) => {
+        return updateDay(day, data)
+    })
+
+    return sortedBands
 }
 
 export const updateDay = (day, data) => {

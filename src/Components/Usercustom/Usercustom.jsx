@@ -3,7 +3,7 @@ import {RxCross2} from "react-icons/rx"
 import CustomError from "../../Pages/Error/CustomError"
 import CustomLoading from "../../Pages/Loading/CustomLoading"
 import "../../Pages/Userpage/Userpage"
-import { fetchProgram, updateDay, collectDays } from '../../customHooks/fetchProgram'
+import { fetchProgram, updateDay, collectDays, sortPerDay } from '../../customHooks/fetchProgram'
 import {useUser} from "../../customHooks/user"
 
 export default function Usercustom() {
@@ -14,15 +14,19 @@ export default function Usercustom() {
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true);
     const [myProgram, setMyProgram] = useState();
-    const [avalibleDays, setAvalibleDays] = useState([]);
+    // const [avalibleDays, setAvalibleDays] = useState([]);
 
 
     const newFunction = async () => {
         try {
             const newFetch = await fetchProgram(userLogin)
-            setAvalibleDays(collectDays(newFetch))
-            setMyProgram(newFetch)
-            setLoading(false)    
+            // setAvalibleDays(collectDays(newFetch))
+            // setMyProgram(newFetch)
+            setMyProgram(sortPerDay(newFetch))
+            setLoading(false)
+
+
+            // sortPerDay(newFetch)   
         } 
         catch (error) {
             setError("Server error, try again.")
@@ -45,6 +49,7 @@ export default function Usercustom() {
             return response.json()
         })
         .then((data) => {
+            setLoading(true)
             newFunction()
             // console.log(data)
         })
@@ -77,7 +82,26 @@ export default function Usercustom() {
     return (
         <div className='user'>
 
-            {avalibleDays.map((day) => {
+            {myProgram.map((day) => {
+                return (
+                    <div key={day[0].day} className={`user__${day[0].day}`}>
+                        <h3>{day[0].day}</h3>
+                        {day.map((band) => {
+                            return (
+                                <div key={band.id} className="card">
+                                    <p className={`card__time ${spaceBegone(band.stage)}`}>{band.time}</p>
+                                    <p className='card__name'>{band.name}</p>
+                                    <div className="card__delete" data-deleteid={band.deleteId.id} onClick={deleteBandFromMyProgram}><RxCross2 /></div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                )
+                
+            })}
+
+
+            {/* {avalibleDays.map((day) => {
                 return (
                     updateDay(day, myProgram).length > 0 ? 
                     <div key={day} className={`user__${day}`}>
@@ -94,7 +118,7 @@ export default function Usercustom() {
                     </div> 
                     : null
                 )
-            })}
+            })} */}
         </div>
     )
 }
